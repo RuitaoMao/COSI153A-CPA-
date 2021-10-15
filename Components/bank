@@ -1,0 +1,65 @@
+class Point {
+  constructor(x){
+    this.x=x
+    }
+  deposit(money){
+    this.x+=money
+  }
+  withdraw(money){
+  this.x-=money
+  }
+}
+const transfer = (acct1, acct2, amount) => {
+  acct1.withdraw;
+  acct2.deposit;
+}
+
+export {transfer}
+export default BankAccount
+
+
+
+
+import { StatusBar } from 'expo-status-bar';
+import React, {useState} from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import BankAccount,{transfer} from '../lib/BankAccount'
+
+export default function App() {
+  let acct1 = new BankAccount(100)
+  let acct2 = new BankAccount(100)
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.header}>
+          Bank Account Demo
+      </Text>
+      <Text>
+        Acct 1 is  {acct1.x}
+      </Text>
+      <Text>
+        Acct 2 is {acct2.x}
+      </Text>
+      <Button
+        title="transfer"
+        onPress={() => {transfer(acct1,acct2,20)}} />
+
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  header: {
+    fontSize:32,
+    padding:25,
+    color:"red",
+    backgroundColor:'black',
+  }
+});
