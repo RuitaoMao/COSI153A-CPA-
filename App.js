@@ -1,8 +1,8 @@
 import React from 'react';
-import CPA_mobile from './Components/CPA_mobile';
-
+import NewCPA from './Components/NewCPA';
+import CPA from './Components/CPA_mobile'
 export default function App() {
   return (
-    <CPA_mobile/>
+    <NewCPA/>
   );
 }

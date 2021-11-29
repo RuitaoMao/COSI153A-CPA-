@@ -10,7 +10,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Stack = createNativeStackNavigator();
 
-const CPA_mobile = () => {
+const Stack1 = () => {
 
 
   return (
@@ -755,4 +755,4 @@ const styles = StyleSheet.create({
 
 
 });
-export default CPA_mobile;
+export default Stack1;
